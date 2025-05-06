@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven 3.9.6'  
-        jdk 'JDK 17'    // <-- Make sure this matches your configured JDK name
+        jdk 'JDK 17' // Ensure this matches the tool name configured in Jenkins
     }
 
     stages {
@@ -28,10 +28,10 @@ pipeline {
 
     post {
         success {
-            echo 'Build and test completed successfully.'
+            echo '✅ Build and test completed successfully.'
         }
         failure {
-            echo 'Build failed!'
+            echo '❌ Build failed!'
         }
     }
 }
